@@ -1,0 +1,31 @@
+{
+  "bundle_version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "skills": [
+    {
+      "name": "blender-work-methodology",
+      "version": "1.0.0",
+      "description": "10 department cards, 4 commission chains, skill writing guide, and 5-gradient QA"
+    },
+    {
+      "name": "blender-asset-manager",
+      "version": "1.0.0",
+      "description": "Asset naming, Catalog mapping, transactional publish, and drag-in checks"
+    },
+    {
+      "name": "blender-modeling-review",
+      "version": "1.0.0",
+      "description": "5-gradient commercial QA standard and headless Blender 5.3 scorecard probe"
+    },
+    {
+      "name": "simready-hard-surface-research",
+      "version": "1.0.0",
+      "description": "Industrial OpenUSD hard-surface structure & joint decomposition"
+    },
+    {
+      "name": "blender-tutorial-scout",
+      "version": "1.0.0",
+      "description": "Sanitized public Blender tutorial scouting & trust-grading template"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "SimReady 硬表面与机械结构研究"
+  short_description: "按需从 SimReady Central 挑选对口工业资产，拆解分件枢轴与布线倒角并输出重建约束"
+  default_prompt: "按当前任务从 NVIDIA SimReady Central 挑选单个对口机械资产，分析 OpenUSD 分件层级、运动副枢轴与硬表面布线，输出可追溯参考卡和 Blender 重建约束。"
+  default_prompt: "Use $simready-hard-surface-research for this Blender workflow task."

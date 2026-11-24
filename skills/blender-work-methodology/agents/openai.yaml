@@ -1,0 +1,5 @@
+interface:
+  display_name: "Blender 制片方法"
+  short_description: "按十个部门拆解 Blender 委托，衔接上下游交接、用户审看点与验收"
+  default_prompt: "按 Blender 制片方法拆解这份委托要经过的部门、交接内容和审看节点。"
+  default_prompt: "Use $blender-work-methodology for this Blender workflow task."
