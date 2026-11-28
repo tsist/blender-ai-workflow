@@ -74,7 +74,7 @@ metadata:
 4. **G4 光影法线与运动连续（20 分）**：5.x 法线栈与条形高光顺滑无夹捏，角色弯折、机构行程或帧间画面连续稳定。
 5. **G5 UV、PBR 与交付品相（15 分）**：SubD 锁角、UV 边距与纹素密度、反照率物理区间、Cycles 与 EEVEE Next 光追双引擎及纯贴图重建一致（只交白模或前中期阶段时，按适用梯度满分折算百分制）。
 
-模型与资产直接跑 [blender-modeling-review](https://github.com/tsist/blender-modeling-review/blob/main/SKILL.md) 生成 `quality-scorecard.json`；绑定、动画、镜头、合成、剪辑按 [各领域验收要点](references/domain-acceptance.md) 出一份同结构成绩单。**L2 与 L3 任务在送用户审看和最终交付前，先派一名未参与制作的独立只读子代理盲审打分，达到放行线再呈交用户。**
+模型与资产直接跑 [blender-modeling-review](../blender-modeling-review/SKILL.md) 生成 `quality-scorecard.json`；绑定、动画、镜头、合成、剪辑按 [各领域验收要点](references/domain-acceptance.md) 出一份同结构成绩单。**L2 与 L3 任务在送用户审看和最终交付前，先派一名未参与制作的独立只读子代理盲审打分，达到放行线再呈交用户。**
 
 | 作品 | 审看① | 审看② |
 |---|---|---|
@@ -124,7 +124,7 @@ metadata:
 
 ## 参考
 
-- `部门卡`
+- [部门卡](references/departments/)
 - [各领域验收要点](references/domain-acceptance.md)
 - [技能写作规范](references/skill-writing-guide.md)
 - [已有制作方法](references/method-index.md)

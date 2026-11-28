@@ -21,7 +21,7 @@
 
 ## 什么时候给用户看
 
-- **可复用资产**：这是**审看②（最终材质）**。达到 L2/L3 标准的资产，先由未参与制作的独立只读子代理跑 [blender-modeling-review](https://github.com/tsist/blender-modeling-review/blob/main/SKILL.md) 盲审过线并产出 `quality-scorecard.json`，再把可编辑节点版、干净工程纯贴图重建版与 EEVEE Next 光追对照（含整体、关键近景和棋盘格）呈给用户审看。
+- **可复用资产**：这是**审看②（最终材质）**。达到 L2/L3 标准的资产，先由未参与制作的独立只读子代理跑 [blender-modeling-review](../../../blender-modeling-review/SKILL.md) 盲审过线并产出 `quality-scorecard.json`，再把可编辑节点版、干净工程纯贴图重建版与 EEVEE Next 光追对照（含整体、关键近景和棋盘格）呈给用户审看。
 - **角色或镜头资产**：自检通过后交绑定或镜头与灯光部门，随动作预览或最终帧一起看。
 
 ## 出了问题回哪里修

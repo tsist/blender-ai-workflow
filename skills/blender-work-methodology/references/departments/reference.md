@@ -9,8 +9,8 @@
 ## 选路与专项技能
 
 - **做全套参考图包**：读 [blender-modeling-reference](https://github.com/tsist/blender-modeling-reference/blob/main/SKILL.md)。先定一张主效果图锁定风格和大形，再补正交三视图、尺寸表和局部放大图。用原生生图或按需用 ComfyUI 出图，传进会话的图片控制在最长边 2048 像素以内。
-- **遇到陌生工艺或质量标准拿不准**：先查项目 `tutorial-library/` 和共享 Wiki，找一到三个成熟案例看懂标准做法。库里缺中文教程时，读 [blender-tutorial-scout](https://github.com/tsist/blender-tutorial-scout/blob/main/SKILL.md) 定向检索补充。
-- **做工业机械、夹爪或仓储设备需要真实结构参考**：读 [simready-hard-surface-research](https://github.com/tsist/simready-hard-surface-research/blob/main/SKILL.md)，挑选当前任务需要的对象提取分件关系和布线参考。
+- **遇到陌生工艺或质量标准拿不准**：先查项目 `tutorial-library/` 和共享 Wiki，找一到三个成熟案例看懂标准做法。库里缺中文教程时，读 [blender-tutorial-scout](../../../blender-tutorial-scout/SKILL.md) 定向检索补充。
+- **做工业机械、夹爪或仓储设备需要真实结构参考**：读 [simready-hard-surface-research](../../../simready-hard-surface-research/SKILL.md)，挑选当前任务需要的对象提取分件关系和布线参考。
 - **查 CLI 入口**：运行 `blenderctl.ps1 discover --product research` 查看参考与研究相关入口。
 
 ## 交给下游什么

@@ -11,7 +11,7 @@
 
 ## 五级重要性梯度（共 100 分，前级不过当场打回）
 
-模型与资产委托直接运行 [blender-modeling-review](https://github.com/tsist/blender-modeling-review/blob/main/SKILL.md) 的商业探针与复算脚本；纯绑定、动画、镜头、合成、剪辑委托按下表对应列逐项打分（某阶段不涉及 G5 时，按适用梯度满分折算为百分制）：
+模型与资产委托直接运行 [blender-modeling-review](../../blender-modeling-review/SKILL.md) 的商业探针与复算脚本；纯绑定、动画、镜头、合成、剪辑委托按下表对应列逐项打分（某阶段不涉及 G5 时，按适用梯度满分折算为百分制）：
 
 | 梯度与分值 | 模型与资产 | 绑定、动画与物理 | 镜头、灯光与三渲二 | 合成与 VSE 剪辑 |
 |---|---|---|---|---|

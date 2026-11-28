@@ -10,12 +10,12 @@
 
   <decision_framework>
     <adoption_ladder priority="critical">
-      <step order="1">直接可用：Blender 原生功能、内置扩展，以及本项目已安装验收的自研插件与公共 CLI。</step>
+      <step order="1">直接可用（自研优先）：① 优先调用本项目已安装验收的自研插件同核接口与公共 CLI（如绑定、体素蒙皮、布光、合成、镜头、三渲二、动画、物理工作台）；② 仅在自研插件未覆盖的常规操作，或已核实自研插件源码/目录确无对应模块并说明差距后，才使用 Blender 原生功能与内置扩展。</step>
       <step order="2">免费开源的成熟插件与官方扩展（如 Rigify、LoopTools、Bool Tool、MACHIN3tools 等免费开源版本；方案选用免费开源工具，隔离付费商业插件）。</step>
       <step order="3">优质教程与成熟成品里的标准制作工序，手工或配最小脚本照做。</step>
       <step order="4">可借鉴的活跃开源实现（参考思路或合规引入依赖）。</step>
       <step order="5">新建自研插件、新 CLI 命令族或大型功能。</step>
-      <rule>从第 1 级往下选，上一级能达到够用标准就当场采用。把已经被作品验证有效、还要在多件作品里反复跑的工序才封装进插件与 CLI。</rule>
+      <rule>从第 1 级往下选，上一级能达到够用标准就当场采用。凡自研插件已覆盖的专项能力（例如 `rigging_workflow` 的模块化人形/四足骨架封装与 26 邻接体素蒙皮），严禁绕开自研核心直接改用裸 Blender 原生算子（如手写裸 Rigify + `ARMATURE_AUTO` 热力蒙皮）草率替代；核实能力边界前须同时查全 `discover` 相关版本与源码目录。把已经被作品验证有效、还要在多件作品里反复跑的工序才封装进插件与 CLI。</rule>
     </adoption_ladder>
     <rule id="build-value-gate" priority="critical">准备进入第 5 级（新建插件、新命令族或大功能）前，先向用户讲清：前四级差在哪里、预期能帮哪些作品省多少时间或解决什么质量卡点、大概要投入多少开发与维护成本；用户批准后再动工。已有自研工具的小修补和已约定迭代直接推进。</rule>
     <rule id="scope-change-cost">需求范围扩大时，先简短说明对当前交付时间和复杂度的影响，并给出更轻量的备选做法，按用户拍板的范围推进。</rule>
@@ -78,7 +78,7 @@
         <route target="blender-modeling-review" repo="tsist/blender-modeling-review" when="白模里程碑、多候选比选或正式交付前需要独立审看造型与工程规范时" deliverable="五级商业梯度评分单（quality-scorecard.json）、问题截图与返修清单" handoff_to="用户审看或退回建模部门精修" />
         <route target="blender-uv" repo="tsist/blender-uv-workflow" when="为定稿白模规划接缝、低拉伸展开、分配像素密度、生成光照图 UV2 或迁移 UV 时" deliverable="带验证报告的渲染 UV 层与辅助 UV 层" handoff_to="材质制作环节" />
         <route target="blender-material-authoring" repo="tsist/blender-material-workflow" when="在中性灯光下制作分层材质节点、高低模投射烘焙与导出可移植贴图时" deliverable="可编辑节点主工程、导出贴图包与干净工程贴图重建对照" handoff_to="用户最终材质审看、资产入库或镜头灯光部门" />
-        <route target="blender-rigging" repo="tsist/blender-rigging-workflow" when="角色或复杂机构需要生成骨架、体素蒙皮、部件转权、选骨局修、面部表情或次级弹性骨时" deliverable="未蒙皮待审骨架，以及蒙皮完成的可操作角色工程与控制板" handoff_to="用户骨架审看或动画与模拟部门" />
+        <route target="blender-rigging" repo="tsist/blender-rigging-workflow" when="角色、四足生物或复杂机构需要生成骨架、体素蒙皮、部件转权、选骨局修、面部表情或次级弹性骨时（人形 C94 走 candidate-entry；独立人形/四足优先走自研 rigging_workflow v003 的 modular_rig + modular_workflow 体素蒙皮，禁用原生 ARMATURE_AUTO 替代）" deliverable="未蒙皮待审骨架，以及蒙皮完成的可操作角色工程与控制板" handoff_to="用户骨架审看或动画与模拟部门" />
         <route target="blender-animation-workflow" repo="tsist/blender-animation-curves-workflow" when="制作关键帧表演、脚底支撑、双人及灯光同步事件、音乐节拍卡点或片段复用时" deliverable="可编辑 Action、事件时间表与动作预览视频" handoff_to="用户动作审看、物理模拟或镜头与剪辑部门" />
         <route target="blender-physics-workflow" repo="tsist/blender-physics-workflow" when="计算刚体散落、粒子、布料绳索等服从主表演节奏的物理动态与 OpenVDB 体积时" deliverable="物理设置副本、烘焙好的磁盘缓存目录与短预览" handoff_to="镜头灯光或渲染与风格化部门" />
         <route target="blender-camera-workflow" repo="tsist/blender-camera-workflow" when="建立与调整全片镜头表、架设机位焦段、比较构图候选或现场播放实体分镜预演时" deliverable="镜头表主档、相机工程副本与实体分镜预演" handoff_to="用户预演审看、灯光、动画或剪辑部门" />

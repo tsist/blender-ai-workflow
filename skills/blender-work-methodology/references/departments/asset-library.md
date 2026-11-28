@@ -5,11 +5,11 @@
 ## 从上游收什么
 
 - UV 与材质部门交来的、已获用户第二次审看认可的可编辑主工程（路径与 SHA）、导出的贴图清单与预览图。
-- 用户指定的目标注册资产库名称（如 `User Library`）或资产根目录（`<ASSET_LIBRARY>`）。
+- 用户指定的目标注册资产库名称（如 `User Library`）或资产根目录（`<ASSET_LIBRARY_ROOT>`）。
 
 ## 选路与专项技能
 
-- **命名、分类与事务发布**：先读 [blender-asset-manager](https://github.com/tsist/blenderctl/blob/main/skills/blender-asset-manager/SKILL.md) 和项目资产规范 `docs/asset-management/STANDARD.md`，用 `discover --product asset-library` 查动作。先跑 `asset libraries` 确认目标库已在 Blender 配置里注册并匹配已有 Catalog（缺分类时按命名规则新建）。整件模型标为一个集合资产，确实会单独拿出来复用的零件或材质再单独标记。把贴图打包进资产 `.blend`，同时另交一份独立贴图文件方便外部取用。经 `asset prepare`、`asset index`、`asset plan` 检查无误后，用 `transaction apply` 正式写入库。
+- **命名、分类与事务发布**：先读 [blender-asset-manager](../../../blender-asset-manager/SKILL.md) 和项目资产规范 `docs/asset-management/STANDARD.md`，用 `discover --product asset-library` 查动作。先跑 `asset libraries` 确认目标库已在 Blender 配置里注册并匹配已有 Catalog（缺分类时按命名规则新建）。整件模型标为一个集合资产，确实会单独拿出来复用的零件或材质再单独标记。把贴图打包进资产 `.blend`，同时另交一份独立贴图文件方便外部取用。经 `asset prepare`、`asset index`、`asset plan` 检查无误后，用 `transaction apply` 正式写入库。
 - **新工程真拖入验收**：入库后新建一个干净工程，从目标 Catalog 把集合拖进来（或用 `asset find-collections` 加 `asset place-collection` 放置），冷重开一次：确认默认是轻量的集合实例，转成本地对象后零件层级、修改器、UV 和贴图全都完好可改，外部未声明依赖为零。
 - **发新版留退路**：同一件资产升级时，沿用原来的资产 UUID 和 Catalog UUID，写入新的版本化路径，撤下旧版的浏览器显示标记但保留旧文件不动。这样新工程拖进来就是最新版，老工程原来的链接依然稳稳能开，升不升级由用的人自己决定。
 
